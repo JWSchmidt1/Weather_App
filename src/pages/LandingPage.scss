@@ -1,0 +1,130 @@
+.ion-page {
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.container {
+  padding: 1rem 2rem;
+}
+
+.weatherLoc {
+  padding: 0 1rem;
+
+  p {
+    color: #e0e6ff;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+}
+
+.weatherCon {
+  width: 100%;
+  padding: 0 1.5rem;
+  padding-bottom: 2rem;
+  border-radius: 1.5rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.weatherStatsCon {
+  display: none;
+  flex-direction: column;
+  height: min-content;
+  line-height: 0.3rem;
+  color: white;
+
+  .weatherImg {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 50%;
+      text-align: center;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  .weatherTempCon {
+    display: flex;
+    flex-direction: column;
+
+    .weatherTemp {
+      font-size: 3rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .weatherCondition {
+      font-size: 1rem;
+      text-align: center;
+      color: rgb(179, 179, 179);
+      margin-top: 2rem;
+    }
+  }
+
+  .weatherStatsPlusCon {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: hsla(228, 29%, 66%, 0.357);
+    border-radius: 1rem;
+    padding: 0.3rem 0;
+
+    .weatherDetails {
+      padding: 1rem 0;
+      color: rgb(196, 196, 196);
+      font-size: 0.9rem;
+
+      &:nth-child(-n + 2), &:nth-child(4), &:nth-child(5) {
+        border-right: 1px solid rgba(158, 158, 158, 0.253);
+      }
+
+      &:nth-child(-n + 3) {
+        border-bottom: 1px solid rgba(158, 158, 158, 0.253);
+      }
+    }
+
+    .weatherData {
+      font-size: 1rem;
+      padding-bottom: 0.5rem;
+      color: white;
+    }
+  }
+}
+
+.buttonsCon {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  overflow-x: scroll;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .showStatsCon {
+    width: 200%;
+    margin: 0 0.1rem;
+  }
+
+  .showWeatherStats {
+    background-color: transparent;
+    width: 5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 16px * 20;
+    color: #9ea3b5;
+    font-size: 1rem;
+  }
+
+  .active {
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    background-color: #c8d2fb;
+    box-shadow: 1px 1px 5px #e0e6ff;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    color: #525769;
+  }
+}
